@@ -71,15 +71,15 @@ easyQuestionBank = [
 mediumQuestionBank = [
         {
             "level": "MEDIUM (Points: 5)",
-            "q" : "999 + 868 = _",
-            "options" : ["1677", "2109", "1867", "2059"],
+            "q" : "99 + 8 = _",
+            "options" : ["167", "210", "186", "107"],
             "answer" : 3
         },
 
         {
             "level": "MEDIUM (Points: 5)",
-            "q" : "58.3 + 68.7 = _",
-            "options" : ["145.0", "127.0", "139.2", "114"],
+            "q" : "58 + 6 = _",
+            "options" : ["69", "92", "64", "74"],
             "answer" : 2
         },
 
@@ -92,8 +92,8 @@ mediumQuestionBank = [
 
         {
             "level": "MEDIUM (Points: 5)",
-            "q" : "58.3 - 45.8 = _",
-            "options" : ["11.5", "12.5", "13.4", "11.4"],
+            "q" : "58 - 11 = _",
+            "options" : ["11", "12", "47", "19"],
             "answer" : 2
         },
 
@@ -101,47 +101,46 @@ mediumQuestionBank = [
             "level": "MEDIUM (Points: 5)",
             "q" : "4 * 5 = _",
             "options" : ["45", "15", "80", "20"],
-            "answer" : 4
-        }
-    ]
-    
-hardQuestionBank = [
-        {
-            "level": "HARD (Points: 10)",
-            "q" : "69.5 + 98.6 = _",
-            "options" : ["158.7", "168.1", "168.9", "166.8"],
-            "answer" : 1
-        },
-
-        {
-            "level": "HARD (Points: 10)",
-            "q" : "56.8 - _ = 20",
-            "options" : ["45.8", "26.3", "36.8", "35.7"],
-            "answer" : 2
-        },
-
-        {
-            "level": "HARD (Points: 10)",
-            "q" : "6 * 7 = _",
-            "options" : ["45", "42", "49", "54"],
-            "answer" : 1
-        },
-
-        {
-            "level": "HARD (Points: 10)",
-            "q" : "8.8 * 7.3 = _",
-            "options" : ["45.8", "59.8", "66.8", "64.24"],
             "answer" : 3
-        },
-
-        {
-            "level": "HARD (Points: 10)",
-            "q" : "55 / 5 = _",
-            "options" : ["11", "5", "9", "12"],
-            "answer" : 0
         }
     ]
 
+hardQuestionBank = [
+    {
+        "level": "HARD (Points: 10)",
+        "q" : "69 + 98 = _",
+        "options" : ["158", "167", "168", "166"],
+        "answer" : 1
+    },
+
+    {
+        "level": "HARD (Points: 10)",
+        "q" : "56 - _ = 20",
+        "options" : ["45", "26", "36", "35"],
+        "answer" : 2
+    },
+
+    {
+        "level": "HARD (Points: 10)",
+        "q" : "6 * 9 = _",
+        "options" : ["23", "54", "49", "54"],
+        "answer" : 1
+    },
+
+    {
+        "level": "HARD (Points: 10)",
+        "q" : "8 * 7 = _",
+        "options" : ["54", "59", "66", "56"],
+        "answer" : 3
+    },
+
+    {
+        "level": "HARD (Points: 10)",
+        "q" : "55 / 5 = _",
+        "options" : ["11", "5", "9", "12"],
+        "answer" : 0
+    }
+]
 
 $(document).ready(function(){  
     
@@ -245,23 +244,65 @@ $(document).ready(function(){
         
     
     $("#go").click(function() {
-        if((scoreCalculated == false) && (selectedOption == currentQuestion["answer"]))
+        if(selectedOption == currentQuestion["answer"])
         {
-            if(currentQuestion["level"] == "EASY (Points: 2)"){
-                score += 2;
-                localStorage.setItem("score", "Score: " + score);
+            if(selectedOption == 0)
+            {
+                $("#op1").css("background-color", "#8cd98c");
             }
-            else if(currentQuestion["level"] == "MEDIUM (Points: 5)"){
-                score += 5;
-                localStorage.setItem("score", "Score: " + score);
+            else if(selectedOption == 1)
+            {
+                $("#op2").css("background-color", "#8cd98c");
             }
-            else if(currentQuestion["level"] == "HARD (Points: 10)"){
-                score += 10;
-                localStorage.setItem("score", "Score: " + score);
-            } 
+            else if(selectedOption == 2)
+            {
+                $("#op3").css("background-color", "#8cd98c");
+            }
+            else if(selectedOption == 3)
+            {
+                $("#op4").css("background-color", "#8cd98c");
+            }
             
+            if(scoreCalculated == false)
+            {
+                if(currentQuestion["level"] == "EASY (Points: 2)"){
+                    score += 2;
+                    localStorage.setItem("score", "Score: " + score);
+                }
+                else if(currentQuestion["level"] == "MEDIUM (Points: 5)"){
+                    score += 5;
+                    localStorage.setItem("score", "Score: " + score);
+                }
+                else if(currentQuestion["level"] == "HARD (Points: 10)"){
+                    score += 10;
+                    localStorage.setItem("score", "Score: " + score);
+                } 
+
+                scoreCalculated = true;
+                selectedOption = -1;
+            }
+            
+        }
+        else
+        {
             scoreCalculated = true;
-            selectedOption = -1;
+            
+            if(selectedOption == 0)
+            {
+                $("#op1").css("background-color", "#ff8566");
+            }
+            else if(selectedOption == 1)
+            {
+                $("#op2").css("background-color", "#ff8566");
+            }
+            else if(selectedOption == 2)
+            {
+                $("#op3").css("background-color", "#ff8566");
+            }
+            else if(selectedOption == 3)
+            {
+                $("#op4").css("background-color", "#ff8566");
+            }
         }
         
         $("#score").html(localStorage["score"]);
@@ -270,6 +311,13 @@ $(document).ready(function(){
     
     $("#next").click(function() {
         loadQuestion();
+        scoreCalculated = false;
+        
+        $("#op1").css("background-color", "#f0f0f5");
+        $("#op2").css("background-color", "#f0f0f5");
+        $("#op3").css("background-color", "#f0f0f5");
+        $("#op4").css("background-color", "#f0f0f5");
+        
     });
 
 });

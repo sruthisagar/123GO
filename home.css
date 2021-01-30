@@ -6,7 +6,6 @@ body{
 .body{
     text-align: center;
     font-family: sans;
-/*    margin: 0 10% 10% 10%;*/
     background-image: url(https://i.pinimg.com/736x/17/e4/c7/17e4c7e3d0f0c3e20d2fe2a86350b873.jpg);
 }
 
@@ -82,4 +81,3 @@ img{
     color: darkviolet;
     text-shadow: 2px 2px 2px #a3a3c2;
 }
-
