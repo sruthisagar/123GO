@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>123Go!</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    
+    <body>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="home.js"></script>
+        
+        <audio src="BGM/bgm.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+  
+        <div class="top-bar">
+            <div id="score">
+                Score: 0 
+            </div>
+            <div id="player">
+                Player Name
+            </div>
+        </div> <br>
+           
+        <div class="body">
+
+            <img src="Images/Logo.png" alt="123Go!">
+        
+
+            <h1 id="name">NAME</h1> 
+            <input id="input-name" type="text" placeholder="Player Name"> 
+            <button id="save">Save</button> <br> <br> <br>
+            
+            <button id="test" onclick="location.href='questions.html';">TEST YOUR LEVEL</button> <br> <br>
+            
+            <h1 id="level">SELECT YOUR LEVEL</h1> <br>
+            <button id="easy" onclick="location.href='questions.html';">EASY</button> <br> <br>
+            <button id="medium" onclick="location.href='questions.html';">MEDIUM</button> <br> <br>
+            <button id="hard" onclick="location.href='questions.html';">HARD</button> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+ 
+        </div>
+    </body>
+</html>

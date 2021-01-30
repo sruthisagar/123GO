@@ -1,0 +1,85 @@
+body{
+    text-align: center;
+    font-family: sans;
+}
+
+.body{
+    text-align: center;
+    font-family: sans;
+/*    margin: 0 10% 10% 10%;*/
+    background-image: url(https://i.pinimg.com/736x/17/e4/c7/17e4c7e3d0f0c3e20d2fe2a86350b873.jpg);
+}
+
+#name{
+    color: #ff6666;
+}
+
+#level{
+    color: #47d1d1;
+
+}
+
+button{
+    font-size: 150%;
+    color: #cc66ff;
+    padding: 1%;
+    width: 20%;
+    border: solid 2px #cc66ff;
+    box-shadow: 2px 2px 2px #a3a3c2;
+}
+
+#test{
+    color: #ff8533;
+    border: solid 2px #ff8533;
+    width: 20%;
+}
+
+input{
+    font-size: 150%;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+#save{
+    width: 5%;
+    height: 6%;
+    padding: 0.1%;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    color: #ff0066;
+    font-size: 150%;
+    border: solid 2px #00e6ac;
+    border-radius: 10px;
+    padding: 2%;
+    box-shadow: 10px 10px 8px #888888;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0,aquamarine 100%);
+
+}
+
+img{
+    height: 15%;
+    width: 15%;
+}
+
+#level-points{
+    color: #ff6666;
+    font-size: 130%;
+}
+
+#quit{
+    color: red;
+    border: solid 2px red;
+}
+
+.option{
+    color: #0055ff;
+    border: solid 2px #0055ff;
+}
+
+.question{
+    color: darkviolet;
+    text-shadow: 2px 2px 2px #a3a3c2;
+}
+

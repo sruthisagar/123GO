@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>123Go!</title>
+        <link rel="stylesheet" href="home.css">
+
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="questions.js"></script>
+        
+        <audio src="BGM/bgm.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+
+
+        <div class="top-bar">
+            <div id="score">
+                Score: 0 
+            </div>
+            <div id="player">
+                Player Name
+            </div>
+        </div> <br>
+        
+        <div class="body">
+            <br>
+            <div id="level-points">
+                MEDIUM (Points: 5)
+            </div>
+            <h1 id="question" class="question">4 + 5 = _</h1>
+            
+            <button id="op1" class="option">45</button> <br> <br>
+            <button id="op2" class="option">8</button> <br> <br>
+            <button id="op3" class="option">9</button> <br> <br>
+            <button id="op4" class="option">54</button>
+            <br> <br> <br> <br>
+            <button id="go">GO!</button> &nbsp; &nbsp; &nbsp;
+            <button id="next">NEXT</button>
+            <br> <br> <br> <br> <br> <br>
+            <button id="quit" onclick="location.href='home.html';">QUIT</button> 
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        </div>
+    </body>
+</html>
