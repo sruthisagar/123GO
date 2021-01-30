@@ -25,9 +25,9 @@ testQuestionBank = [
 
         {
             "level": "HARD (Points: 10)",
-            "q" : "5.4 + 8.9 = _",
-            "options" : ["53.18", "51.07", "45.01", "48.06"],
-            "answer" : 3
+            "q" : "4 * 3 = _",
+            "options" : ["12", "7", "14", "9"],
+            "answer" : 0
         }
     ]
     
@@ -87,7 +87,7 @@ mediumQuestionBank = [
             "level": "MEDIUM (Points: 5)",
             "q" : "78 - 56 = _",
             "options" : ["22", "23", "32", "12"],
-            "answer" : 1
+            "answer" : 0
         },
 
         {
