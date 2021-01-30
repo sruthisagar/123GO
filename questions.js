@@ -65,6 +65,20 @@ easyQuestionBank = [
             "q" : "16 + 5 = _",
             "options" : ["31", "13", "12", "21"],
             "answer" : 3
+        },
+
+        {
+            "level": "EASY (Points: 2)",
+            "q" : "There were 10 cookies in the jar. My mom put 15 more today morning. How many cookies does the jar now have?",
+            "options" : ["10", "35", "25", "15"],
+            "answer" : 2
+        },
+
+        {
+            "level": "EASY (Points: 2)",
+            "q" : "I have 8 bottles of water. I finished drinking 2 of them. How many bottles of water am I left with?",
+            "options" : ["6", "10", "2", "8"],
+            "answer" : 0
         }
     ]
     
@@ -102,6 +116,20 @@ mediumQuestionBank = [
             "q" : "4 * 5 = _",
             "options" : ["45", "15", "80", "20"],
             "answer" : 3
+        },
+
+        {
+            "level": "MEDIUM (Points: 5)",
+            "q" : "Sania counted 3  flowers in the flower pot. Each flower has 3 petals. How many petals are there in all?",
+            "options" : ["3", "6", "9", "12"],
+            "answer" : 2
+        },
+
+        {
+            "level": "MEDIUM (Points: 5)",
+            "q" : "My friend and I bought 15 balls each. How many balls did we buy?",
+            "options" : ["15", "30", "17", "13"],
+            "answer" : 1
         }
     ]
 
@@ -139,6 +167,20 @@ hardQuestionBank = [
         "q" : "55 / 5 = _",
         "options" : ["11", "5", "9", "12"],
         "answer" : 0
+    },
+
+    {
+        "level": "HARD (Points: 10)",
+        "q" : "There are 36 pages in this book. I plan to read 6 pages a day. How many days will I take to finish the book?",
+        "options" : ["30", "42", "36", "6"],
+        "answer" : 3
+    },
+
+    {
+        "level": "HARD (Points: 10)",
+        "q" : "I am thinking of an odd number.It is greater than 11 and less than 14. What could my odd number be?",
+        "options" : ["10", "13", "12", "15"],
+        "answer" : 1
     }
 ]
 
@@ -187,8 +229,6 @@ $(document).ready(function(){
         $(this).css("background-color","#f0f0f5");
     });
     
-
-    
 //    replacing qustion with current question    
     function loadQuestion() {
 
@@ -207,6 +247,9 @@ $(document).ready(function(){
         }
         else{
             // end of questions
+//            $("#next").click(function() {
+//                location.href="index.html";
+//            });
             $("#next").attr('disabled', 'disabled');
             $("#next").css("background-color", "#c2c2d6");
         }
