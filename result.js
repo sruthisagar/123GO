@@ -1,6 +1,12 @@
 $(document).ready(function() {
     
-    $("#congrats").html("CONGRATULATIONS " + localStorage["name"] + "!!!");
+    if(localStorage["name"] != null){
+        $("#congrats").html("CONGRATULATIONS " + localStorage["name"] + "!!!");
+    }
+    else{
+        $("#congrats").html("CONGRATULATIONS!!!");
+    }
+    
     
     if(localStorage["level"] == "test"){
         if((localStorage["score"] >= 0) && (localStorage["score"] < 5))
