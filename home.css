@@ -81,3 +81,35 @@ img{
     color: darkviolet;
     text-shadow: 2px 2px 2px #a3a3c2;
 }
+
+.result{
+    text-align: center;
+    font-family: sans;
+    background-image: url(https://www.discoversma.com/wp-content/uploads/2019/07/67888_fireworks.gif); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#congrats{
+    color: aqua;
+}
+
+#display-level{
+    color: #ff0066;
+}
+
+#display-score{
+    color: #00e673;
+}
+
+#result-content{
+    text-align: center;
+    font-family: sans;
+    margin: 15%
+}
+
+#back-to-home{
+    color: white;
+    background-color: #ff6666;
+    border: solid 2px red;
+}

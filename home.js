@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
     
     
-    localStorage["score"] = "Score: 0";
+    localStorage["score"] = 0;
     
 //    colour change on hover
     $("button").mouseenter(function() {

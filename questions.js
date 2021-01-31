@@ -194,7 +194,7 @@ $(document).ready(function(){
     
     var level = localStorage["level"];
     
-    localStorage["score"] = "Score: 0";
+    localStorage["score"] = 0;
     
     if (level == "easy"){
         currentQuestionBank = easyQuestionBank;
@@ -246,12 +246,12 @@ $(document).ready(function(){
     
         }
         else{
-            // end of questions
-//            $("#next").click(function() {
-//                location.href="index.html";
-//            });
-            $("#next").attr('disabled', 'disabled');
-            $("#next").css("background-color", "#c2c2d6");
+//             end of questions
+            $("#next").click(function() {
+                location.href="result.html";
+            });
+//            $("#next").attr('disabled', 'disabled');
+//            $("#next").css("background-color", "#c2c2d6");
         }
         
     }
@@ -310,15 +310,15 @@ $(document).ready(function(){
             {
                 if(currentQuestion["level"] == "EASY (Points: 2)"){
                     score += 2;
-                    localStorage.setItem("score", "Score: " + score);
+                    localStorage.setItem("score", score);
                 }
                 else if(currentQuestion["level"] == "MEDIUM (Points: 5)"){
                     score += 5;
-                    localStorage.setItem("score", "Score: " + score);
+                    localStorage.setItem("score", score);
                 }
                 else if(currentQuestion["level"] == "HARD (Points: 10)"){
                     score += 10;
-                    localStorage.setItem("score", "Score: " + score);
+                    localStorage.setItem("score", score);
                 } 
 
                 scoreCalculated = true;
@@ -348,7 +348,7 @@ $(document).ready(function(){
             }
         }
         
-        $("#score").html(localStorage["score"]);
+        $("#score").html("Score: " + localStorage["score"]);
         
     });
     
